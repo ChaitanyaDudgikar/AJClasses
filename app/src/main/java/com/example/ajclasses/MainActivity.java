@@ -6,12 +6,14 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
     CardView examCardView,lectureCardView,notificationCardView,notesCardView,imageCardView;
     ImageView teacherImageView,studentImageView;
+    Button button;
     boolean teacherIsShowing=true;
 
     @Override
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         teacherImageView=findViewById(R.id.teacherImageView);
         studentImageView=findViewById(R.id.studentImageView);
 
+        button=findViewById(R.id.aboutus);
+        button.setOnClickListener(this);
+
         examCardView.setOnClickListener(this);
         lectureCardView.setOnClickListener(this);
         notificationCardView.setOnClickListener(this);
@@ -40,32 +45,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         Intent i;
         switch (view.getId()){
-        case R.id.onlineExamCardView : i=new Intent(getApplicationContext(),OnlineExamActivity.class);
+            case R.id.onlineExamCardView : i=new Intent(getApplicationContext(),OnlineExamActivity.class);
             startActivity(i);
-        break;
-        case R.id.videoLectureCardView : i=new Intent(getApplicationContext(),VideoLectureActivity.class);
+                break;
+            case R.id.videoLectureCardView : i=new Intent(getApplicationContext(),VideoLectureActivity.class);
             startActivity(i);
-        break;
-        case R.id.notificationCardView : i=new Intent(getApplicationContext(), NotificationActivity.class);
+                break;
+            case R.id.notificationCardView : i=new Intent(getApplicationContext(), NotificationActivity.class);
             startActivity(i);
-        break;
-        case R.id.notesCardView : i=new Intent(getApplicationContext(),NotesActivity.class);
+                break;
+            case R.id.notesCardView : i=new Intent(getApplicationContext(),NotesActivity.class);
             startActivity(i);
-        break;
-        case R.id.imageCardView :
-            if(teacherIsShowing)
-            {
-                teacherIsShowing=false;
-                teacherImageView.animate().alpha(0).setDuration(2000);
-                studentImageView.animate().alpha(1).setDuration(2000);
-            }else
-            {
-                teacherIsShowing=true;
-                teacherImageView.animate().alpha(1).setDuration(2000);
-                studentImageView.animate().alpha(0).setDuration(2000);
-            }
-        break;
-        default:break;
+                break;
+            case R.id.imageCardView :
+                if(teacherIsShowing)
+                    {
+                        teacherIsShowing=false;
+                        teacherImageView.animate().alpha(0).setDuration(2000);
+                        studentImageView.animate().alpha(1).setDuration(2000);
+                    }else
+                        {
+                            teacherIsShowing=true;
+                            teacherImageView.animate().alpha(1).setDuration(2000);
+                            studentImageView.animate().alpha(0).setDuration(2000);
+                        }
+                break;
+            case R.id.aboutus : i=new Intent(getApplicationContext(),AboutUs.class);
+            startActivity(i);
+                break;
+            default:
+                break;
         }
 
     }
