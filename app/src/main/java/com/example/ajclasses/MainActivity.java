@@ -3,14 +3,17 @@ package com.example.ajclasses;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
-    CardView examCardView,lectureCardView,notificationCardView,notesCardView;
+    CardView examCardView,lectureCardView,notificationCardView,notesCardView,imageCardView;
+    ImageView teacherImageView,studentImageView;
+    boolean teacherIsShowing=true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -20,11 +23,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lectureCardView=findViewById(R.id.videoLectureCardView);
         notificationCardView=findViewById(R.id.notificationCardView);
         notesCardView=findViewById(R.id.notesCardView);
+        imageCardView=findViewById(R.id.imageCardView);
+
+        teacherImageView=findViewById(R.id.teacherImageView);
+        studentImageView=findViewById(R.id.studentImageView);
 
         examCardView.setOnClickListener(this);
         lectureCardView.setOnClickListener(this);
         notificationCardView.setOnClickListener(this);
         notesCardView.setOnClickListener(this);
+        imageCardView.setOnClickListener(this);
     }
 
     @Override
@@ -44,8 +52,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         case R.id.notesCardView : i=new Intent(getApplicationContext(),NotesActivity.class);
             startActivity(i);
         break;
+        case R.id.imageCardView :
+            if(teacherIsShowing)
+            {
+                teacherIsShowing=false;
+                teacherImageView.animate().alpha(0).setDuration(2000);
+                studentImageView.animate().alpha(1).setDuration(2000);
+            }else
+            {
+                teacherIsShowing=true;
+                teacherImageView.animate().alpha(1).setDuration(2000);
+                studentImageView.animate().alpha(0).setDuration(2000);
+            }
+        break;
         default:break;
         }
 
     }
+
 }

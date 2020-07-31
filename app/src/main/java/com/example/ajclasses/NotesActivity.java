@@ -1,5 +1,6 @@
 package com.example.ajclasses;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -12,5 +13,7 @@ public class NotesActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Notes");
     }
 }

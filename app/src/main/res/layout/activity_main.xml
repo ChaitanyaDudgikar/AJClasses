@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDF0F0F0"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -14,14 +15,14 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:backgroundTint="#DD8485"
+        app:cardBackgroundColor="#F07172"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441">
+        app:layout_constraintVertical_bias="0.479">
 
         <TextView
             android:id="@+id/onlineExamTextView"
@@ -31,7 +32,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="Online Exam"
-            android:textColor="#9A57A3"
+            android:textColor="#313CFA"
             android:textSize="15sp" />
 
         <ImageView
@@ -53,14 +54,14 @@
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:backgroundTint="#ADB6FD"
+        app:cardBackgroundColor="#ADB6FD"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443">
+        app:layout_constraintVertical_bias="0.479">
 
         <TextView
             android:id="@+id/videoLectureTextView"
@@ -70,7 +71,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="Video Lecture"
-            android:textColor="#9A57A3"
+            android:textColor="#313CFA"
             android:textSize="15sp" />
 
         <ImageView
@@ -91,14 +92,14 @@
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:backgroundTint="#FEE377"
+        app:cardBackgroundColor="#FEE377"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713">
+        app:layout_constraintVertical_bias="0.777">
 
         <TextView
             android:id="@+id/notificationTextView"
@@ -108,7 +109,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="Notifications"
-            android:textColor="#9A57A3"
+            android:textColor="#313CFA"
             android:textSize="15sp" />
 
         <ImageView
@@ -129,14 +130,14 @@
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:backgroundTint="#47CC87"
+        app:cardBackgroundColor="#47CC87"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711">
+        app:layout_constraintVertical_bias="0.775">
 
         <TextView
             android:id="@+id/notesTextView"
@@ -146,7 +147,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="Notes"
-            android:textColor="#9A57A3"
+            android:textColor="#313CFA"
             android:textSize="15sp" />
 
         <ImageView
@@ -158,5 +159,83 @@
             android:layout_marginTop="40dp"
             app:srcCompat="@drawable/notes" />
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageCardView"
+        android:layout_width="340dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="#F8FFFFFF"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/teacherImageView"
+            android:layout_width="226dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/stud3" />
+
+        <ImageView
+            android:id="@+id/studentImageView"
+            android:layout_width="226dp"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            app:srcCompat="@drawable/stud2" />
+
+        <TextView
+            android:id="@+id/firstTextView"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="237dp"
+            android:layout_marginTop="25dp"
+            android:text="Online Exams"
+            android:textColor="#313CFA"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/secondTextView"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="237dp"
+            android:layout_marginTop="65dp"
+            android:text="Video Lectures"
+            android:textColor="#313CFA"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/thirdTextView"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="237dp"
+            android:layout_marginTop="105dp"
+            android:text="Notes"
+            android:textColor="#313CFA"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/aboutus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="About us"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
