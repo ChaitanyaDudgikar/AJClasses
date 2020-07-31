@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CardView examCardView,lectureCardView,notificationCardView,notesCardView,imageCardView;
     ImageView teacherImageView,studentImageView;
     Button button;
-    boolean teacherIsShowing=true;
+    boolean studentIsShowing=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -58,19 +58,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
                 break;
             case R.id.imageCardView :
-                if(teacherIsShowing)
+                if(studentIsShowing)
                     {
-                        teacherIsShowing=false;
+                        studentIsShowing=false;
                         teacherImageView.animate().alpha(0).setDuration(2000);
                         studentImageView.animate().alpha(1).setDuration(2000);
                     }else
                         {
-                            teacherIsShowing=true;
+                            studentIsShowing=true;
                             teacherImageView.animate().alpha(1).setDuration(2000);
                             studentImageView.animate().alpha(0).setDuration(2000);
                         }
                 break;
-            case R.id.aboutus : i=new Intent(getApplicationContext(),AboutUs.class);
+            case R.id.aboutus : i=new Intent(getApplicationContext(), AboutUsActivity.class);
             startActivity(i);
                 break;
             default:
