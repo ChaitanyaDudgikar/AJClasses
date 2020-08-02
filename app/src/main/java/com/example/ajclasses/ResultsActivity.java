@@ -7,20 +7,20 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class OnlineExamActivity extends AppCompatActivity
+public class ResultsActivity extends AppCompatActivity
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_online_exam);
+        setContentView(R.layout.activity_results);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Online Exam");
+        actionBar.setTitle("Results");
 
-        WebView containerWebview = findViewById(R.id.examWebView);
+        WebView containerWebview = findViewById(R.id.resultsWebView);
         containerWebview.setWebViewClient(new MyWebViewClient());
-        String url = "https://drive.google.com/drive/folders/1Gg8Cuct8OmM4XkP-t4FGLNfk2ua94vku?usp=sharing";
+        String url = "https://drive.google.com/drive/folders/1SC47rA4mkTuWsdOj_FEzjVhk39ZJ4H0O?usp=sharing";
         containerWebview.getSettings().setJavaScriptEnabled(true);
         containerWebview.loadUrl(url);
     }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "620993014809",
+    "firebase_url": "https://ajclasses-153c4.firebaseio.com",
+    "project_id": "ajclasses-153c4",
+    "storage_bucket": "ajclasses-153c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620993014809:android:565c3ffdcecd0de5fa0e88",
+        "android_client_info": {
+          "package_name": "com.example.ajclasses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620993014809-mnm2kkvj35nlp0j30l429rg88bkb5jsu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ajclasses",
+            "certificate_hash": "ecfe03b13ec7fcf97c3fcaf9328af7033bdd1524"
+          }
+        },
+        {
+          "client_id": "620993014809-5o92gftaup9obmoek8kcrbqijeb8bi38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgvQHIRvkKUZgD_3KQJcjQWS9vl9Wc5XQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620993014809-5o92gftaup9obmoek8kcrbqijeb8bi38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

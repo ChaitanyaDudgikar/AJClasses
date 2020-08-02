@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         notificationCardView.setOnClickListener(this);
         notesCardView.setOnClickListener(this);
         imageCardView.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.videoLectureCardView : i=new Intent(getApplicationContext(),VideoLectureActivity.class);
             startActivity(i);
                 break;
-            case R.id.notificationCardView : i=new Intent(getApplicationContext(), NotificationActivity.class);
+            case R.id.notificationCardView : i=new Intent(getApplicationContext(), ResultsActivity.class);
             startActivity(i);
                 break;
             case R.id.notesCardView : i=new Intent(getApplicationContext(),NotesActivity.class);
