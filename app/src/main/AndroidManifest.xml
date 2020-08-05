@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ajclasses">
+    package="com.aj.ajclasses">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,13 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AboutUsActivity"></activity>
-        <activity android:name=".NotesActivity" />
-        <activity android:name=".ResultsActivity" />
-        <activity android:name=".VideoLectureActivity" />
-        <activity android:name=".OnlineExamActivity" />
+        <activity android:name="com.aj.ajclasses.AboutUsActivity"></activity>
+        <activity android:name="com.aj.ajclasses.NotesActivity" />
+        <activity android:name="com.aj.ajclasses.ResultsActivity" />
+        <activity android:name="com.aj.ajclasses.VideoLectureActivity" />
+        <activity android:name="com.aj.ajclasses.OnlineExamActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.aj.ajclasses.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.aj.ajclasses.MainActivity" />
     </application>
 
 </manifest>

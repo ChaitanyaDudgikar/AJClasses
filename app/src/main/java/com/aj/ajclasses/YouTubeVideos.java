@@ -1,4 +1,4 @@
-package com.example.ajclasses;
+package com.aj.ajclasses;
 
 public class YouTubeVideos {
     String videoUrl;

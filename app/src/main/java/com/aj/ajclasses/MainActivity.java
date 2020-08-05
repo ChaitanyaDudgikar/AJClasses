@@ -1,4 +1,4 @@
-package com.example.ajclasses;
+package com.aj.ajclasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;

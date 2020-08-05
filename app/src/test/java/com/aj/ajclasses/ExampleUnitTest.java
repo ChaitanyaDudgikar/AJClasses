@@ -1,4 +1,4 @@
-package com.example.ajclasses;
+package com.aj.ajclasses;
 
 import org.junit.Test;
 
